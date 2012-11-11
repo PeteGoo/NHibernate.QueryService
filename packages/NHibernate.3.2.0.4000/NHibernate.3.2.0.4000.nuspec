@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>NHibernate</id>
+    <version>3.2.0.4000</version>
+    <title>NHibernate</title>
+    <authors>NHibernate community,  Hibernate community</authors>
+    <owners>NHibernate community,  Hibernate community</owners>
+    <licenseUrl>http://www.gnu.org/licenses/lgpl-2.1.html</licenseUrl>
+    <projectUrl>http://nhforge.org/</projectUrl>
+    <iconUrl>https://nugetgallery.blob.core.windows.net/icons/NHibernate.3.2.0.4000.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>NHibernate is a mature, open source object-relational mapper for the .NET framework. It's actively developed , fully featured and used in thousands of successful projects.</description>
+    <summary>NHibernate is a mature, open source object-relational mapper for the .NET framework. It's actively developed , fully featured and used in thousands of successful projects.</summary>
+    <tags>ORM DataBase DAL ObjectRelationalMapping</tags>
+    <dependencies>
+      <dependency id="Iesi.Collections" version="3.2.0.4000" />
+    </dependencies>
+  </metadata>
+</package>

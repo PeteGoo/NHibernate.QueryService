@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>NHibernate.Caches.SysCache2</id>
+    <version>3.2.0.4000</version>
+    <title />
+    <authors>NHibernate community</authors>
+    <owners>NHibernate community</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Similar to NHibernate.Caches.SysCache, uses ASP.NET cache. This provider also supports SQL dependency-based expiration, meaning that it is possible to configure certain cache regions to automatically expire when the relevant data in the database changes.
+
+SysCache2 requires Microsoft SQL Server 2000 or higher.</description>
+    <summary>Similar to NHibernate.Caches.SysCache, uses ASP.NET cache.</summary>
+    <tags>ORM, DataBase, DAL, ObjectRelationalMapping</tags>
+    <dependencies>
+      <dependency id="NHibernate" version="3.2.0.4000" />
+    </dependencies>
+  </metadata>
+</package>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="NHibernateQueryService.Model"
+                   namespace="NHibernateQueryService.Model"
+                   default-lazy="true">
+  <class name="Person" table="People">
+    <cache region="People" usage="read-only"/>
+    <id name="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="FirstName"/>
+    <property name="LastName"/>
+    <set name="Addresses" table="Addresses" access="field.camelcase">
+      <key column="PersonId"/>
+      <one-to-many class="Address"/>
+    </set>
+  </class>
+
+  <class name="Address" table="Addresses">
+    <id name="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="Line1"/>
+    <property name="Line2"/>
+    <property name="Line3"/>
+    <property name="City"/>
+      <many-to-one class="Country"
+                   name="Country"
+                   column="CountryId"/>
+  </class>
+
+    <class name="Country"
+           table="Countries">
+      <cache region="Countries" usage="read-only"/>
+        <id name="Id">
+            <generator class="identity"/>
+        </id>
+        <property name="Name" />
+    </class>
+</hibernate-mapping>
