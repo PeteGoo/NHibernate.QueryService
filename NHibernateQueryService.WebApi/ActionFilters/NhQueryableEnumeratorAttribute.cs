@@ -29,7 +29,7 @@ namespace NHibernateQueryService.WebApi.ActionFilters {
         }
 
         protected IQueryable ApplyExpansions(IQueryable queryable) {
-            string expandsQueryString = HttpContext.Current.Request.QueryString["expand"];
+            string expandsQueryString = HttpContext.Current.Request.QueryString["$expand"];
             if (string.IsNullOrWhiteSpace(expandsQueryString)) {
                 return queryable;
             }

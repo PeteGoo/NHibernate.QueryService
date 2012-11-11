@@ -28,7 +28,7 @@ To solve this issue for the JSON.Net serializer we use a ContractResolver to ser
 ###Processing the $expand OData operator
 The $expand operator allows the requester to specify the depth of the data that they want retrieved. This is equivalent to the Include operator in Entity Framework and the NHibernate LINQ equivalent is Fetch. To implement this the sample uses an Action Filter which will run its Executed method after the Web API OData action filters. In this it will apply any expands directives and force the enumeration of the results.
 
-Unfortunately the ASP.Net Web API throws an exception when an $expand querystring parameter is found. This is due to the fact that it has not yet been implemented in the fall update and is not expected till 2013.
+Unfortunately the ASP.Net Web API throws an exception when an $expand querystring parameter is found. This is due to the fact that it has not yet been implemented in the fall update and is not expected till 2013. Therefore we also need to derive our own QueryableAttribute and override the validate method to allow $expand
 
 ###Outstanding Issues
 * Need to implement odata model and enable $metadata support.

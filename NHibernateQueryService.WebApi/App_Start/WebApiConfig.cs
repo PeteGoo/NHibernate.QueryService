@@ -18,7 +18,7 @@ namespace NHibernateQueryService.WebApi {
 
             config.Filters.Add(new NhQueryableEnumeratorAttribute());
             
-            config.EnableQuerySupport();
+            config.EnableQuerySupport(new QueryableWithExpandsAttribute());
 
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new NHibernateContractResolver();
             config.Formatters.JsonFormatter.SerializerSettings.Converters.Add(new DynamicProxyJsonConverter());
